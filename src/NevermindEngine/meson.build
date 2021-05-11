@@ -1,1 +1,3 @@
+subdir('core')
+
 subdir('DrawEngine')
