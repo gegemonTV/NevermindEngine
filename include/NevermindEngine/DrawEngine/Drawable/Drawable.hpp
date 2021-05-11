@@ -1,7 +1,8 @@
-#ifndef DRAWABLE_H
-#define DRAWABLE_H
+/**
+ * @file NevermindEngine/DrawEngine/Drawable/Drawable.hpp
+ */
 
-#include <iostream>
+#pragma once
 
 namespace ne
 {
@@ -12,5 +13,3 @@ namespace ne
     };
 } // namespace ne
 
-
-#endif
