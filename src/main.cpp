@@ -1,4 +1,7 @@
+#include <NevermindEngine/DrawEngine/DrawEngine.hpp>
 
 int main (int argc, char ** argv) {
-    return 0;
+    auto x = new DrawEngine();
+
+    return x->id();
 }

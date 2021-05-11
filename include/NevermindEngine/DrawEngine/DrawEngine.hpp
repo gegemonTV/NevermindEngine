@@ -3,13 +3,10 @@
 
 #include <iostream>
 
-namespace ne
-{
     class DrawEngine
     {
-        
+        public : int id ();
     };
-} // namespace ne
 
 
 #endif

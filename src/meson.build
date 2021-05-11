@@ -6,5 +6,6 @@ engine_source = [
 
 engine_bin = executable('neverming',
     sources : engine_source,
-    link_with : draw_engine_lib
+    link_with : draw_engine_lib,
+    include_directories : headers
 )

@@ -1,3 +1,6 @@
 ## Meson build directories
 build/
 builddir/
+
+## ClangD support
+compile_commands.json 
