@@ -1,5 +1,5 @@
 /**
- * @file NevermindEngine/DrawEngine/Drawable/Drawable.hpp
+ * @file NevermindEngine/DrawEngine/Drawable.hpp
  * @author KonstantIMP <mihedovkos@gmail.com>
  * @author gegemonTV <vovakonki776@gmail.com>
  * @date 2021
