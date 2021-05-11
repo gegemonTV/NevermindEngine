@@ -162,6 +162,7 @@ namespace ne
 
     class InputManager{
     private:
+        bool isQuit;
         /**
          * SDL_Thread object for Event Thread
          */
@@ -175,7 +176,7 @@ namespace ne
         /**
          * @brief InputManager constructor
          */
-        InputManager();
+        InputManager(const bool &quitState);
         
         /**
          * @brief InputManager destructor
