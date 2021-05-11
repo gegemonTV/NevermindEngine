@@ -4,6 +4,7 @@ builddir/
 
 ## ClangD support
 compile_commands.json
+.cache/
 
 ## Doxygen output
 html/
