@@ -162,7 +162,15 @@ namespace ne
 
     class InputManager{
     private:
-        std::thread inputThread;   // Thread object for Input Thread   
+        /**
+         * SDL_Thread object for Event Thread
+         */
+         std::thread *eventThread;
+        
+        /**
+         * Loop for handling events in Event Thread
+         */
+        void eventHandler();
     public:
         /**
          * @brief InputManager constructor
@@ -177,10 +185,15 @@ namespace ne
         /**
          * @brief Event setter for mouse buttons
          * @param event MouseEvent enumeration that points on mouse button state
-         * @param function Function that could be called on mouse click event
+         * @param function Function that could be called on mouse event
          */
         void onMouseEvent(MouseEvent event, const std::function<void()> &function);
 
-        void onKeyboardEvent();
+        /**
+         * @brief Event setter for keyboard buttons
+         * @param event KeyboardEvent enumeration that points on mouse button state
+         * @param function Function that could be called on keyboard event
+         */
+        void onKeyboardEvent(KeyboardEvent event, const std::function<void()> &function);
     };
 } // namespace ne
