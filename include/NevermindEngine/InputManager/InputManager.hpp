@@ -3,6 +3,9 @@
 #include <SDL2/SDL.h>
 #include <functional>
 #include <thread>
+#include <mutex>
+#include <map>
+#include <list>
 
 namespace ne
 {
@@ -15,7 +18,7 @@ namespace ne
      * @param SCROLL_CLICKED Scroll button clicked
      * @param SCROLL_RELEASED Scroll button released
      */
-    enum MouseEvent{
+    enum MouseClickEvent{
         MOUSE1_CLICKED,
         MOUSE1_RELEASED,
         MOUSE2_CLICKED,
@@ -172,6 +175,42 @@ namespace ne
          * Loop for handling events in Event Thread
          */
         void eventHandler();
+
+        /**
+         * @brief Functions for quit event
+         */
+        std::list<std::function<void()>*> quitEventFunctions;
+
+        /**
+         * @brief Keyboard events hashmap
+         */
+        std::map<KeyboardEvent, std::function<void()>*> keyboardEventFunctions;
+
+        /**
+         * @brief Mouse click events hashmap
+         */
+        std::map<MouseClickEvent, std::function<void()>*> mouseClickEventFunctions;
+        
+        /**
+         * @brief Struct of mouse click event
+         */
+        struct MouseClick{
+            int x, y;
+            
+            Uint32 type;
+
+            Uint8 state, clicks, button;
+        };
+
+        /**
+         * @brief Struct of mouse click event
+         */
+        struct MouseMotion{
+            Uint32 state;
+
+            Sint32 x, y, xrel, yrel;
+        };
+
     public:
         /**
          * @brief InputManager constructor
@@ -188,7 +227,7 @@ namespace ne
          * @param event MouseEvent enumeration that points on mouse button state
          * @param function Function that could be called on mouse event
          */
-        void onMouseEvent(MouseEvent event, const std::function<void()> &function);
+        void onMouseClickEvent(MouseClickEvent event, const std::function<void()> &function);
 
         /**
          * @brief Event setter for keyboard buttons
@@ -202,5 +241,7 @@ namespace ne
          * @param function Function that could be called on quit event
          */
         void onQuitEvent(const std::function<void()> &function);
+
+        
     };
 } // namespace ne

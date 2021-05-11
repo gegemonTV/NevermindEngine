@@ -5,6 +5,7 @@ using ne::InputManager;
 InputManager::InputManager(const bool &quitState){
     isQuit = quitState;
     eventThread = new std::thread(eventHandler);
+    eventThread->join();
 }
 
 void InputManager::eventHandler(){
