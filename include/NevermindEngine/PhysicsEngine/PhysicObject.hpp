@@ -1,5 +1,5 @@
 /**
- * @file NevermindEngine/DrawEngine/Object.hpp
+ * @file NevermindEngine/PhysicsEngine/PhysicObject.hpp
  * @author KonstantIMP <mihedovkos@gmail.com>
  * @date 2021
  */
