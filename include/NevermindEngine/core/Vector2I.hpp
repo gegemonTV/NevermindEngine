@@ -36,63 +36,63 @@ public :
      * @param[in] sub Vector for sum calculating
      * @return Sum vector
      */
-    const Vector2I operator+(const Vector2I & sub);
+    Vector2I operator+(const Vector2I & sub) const;
 
     /**
      * @brief - operator overloading for vectors
      * @param[in] sub Vector for difference calculating
      * @return Difference vector
      */
-    const Vector2I operator-(const Vector2I & sub);
+    Vector2I operator-(const Vector2I & sub) const;
 
     /**
      * @brief * operator overloading for vectors
      * @param[in] factor Number for product calculating
      * @return Product vector
      */
-    const Vector2I operator*(const float & factor);
+    Vector2I operator*(const float & factor) const;
 
     /**
      * @brief / operator overloading for vectors
      * @param[in] div Number for division calculating
      * @return division vector
      */
-    const Vector2I operator/(const float & div);
+    Vector2I operator/(const float & div) const;
 
     /**
      * @brief += operator overloading for vectors
      * @param[in] sub Vector for sum calculating
      * @return Sum vector
      */
-    const Vector2I operator+=(const Vector2I & sub);
+    Vector2I operator+=(const Vector2I & sub);
 
     /**
      * @brief -= operator overloading for vectors
      * @param[in] sub Vector for difference calculating
      * @return Difference vector
      */
-    const Vector2I operator-=(const Vector2I & sub);
+    Vector2I operator-=(const Vector2I & sub);
 
     /**
      * @brief *= operator overloading for vectors
      * @param[in] factor Number for product calculating
      * @return Product vector
      */
-    const Vector2I operator*=(const float & factor);
+    Vector2I operator*=(const float & factor);
 
     /**
      * @brief /= operator overloading for vectors
      * @param[in] div Number for division calculating
      * @return division vector
      */
-    const Vector2I operator/=(const float & div);
+    Vector2I operator/=(const float & div);
 
     /**
      * @brief == operator overloading for vectors
      * @param[in] source МVector for comparison
      * @return comparison куыгде
      */
-    const bool operator==(const Vector2I & source);
+    bool operator==(const Vector2I & source) const;
 
     /// @brief Contain i vector's part
     float i;
