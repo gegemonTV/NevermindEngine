@@ -8,6 +8,8 @@
 // Include Vector2I
 #include "../core/Vector2I.hpp"
 
+namespace ne {
+
 class Object {
 
 private :
@@ -21,3 +23,4 @@ private :
     Vector2I size;
 };
 
+}

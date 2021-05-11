@@ -5,6 +5,8 @@
  */
 #pragma once
 
+namespace ne {
+
 /** 
  * @brief Descripe vector with 2 coordinates
  */
@@ -97,3 +99,5 @@ public :
     /// @brief Contain j vector's part
     float j;
 };
+
+}

@@ -5,6 +5,8 @@
  */
 #include <NevermindEngine/core/Vector2I.hpp>
 
+using ne::Vector2I;
+
 Vector2I::Vector2I() : i{0}, j{0} {}
 
 Vector2I::Vector2I(const float & i_value, const float & j_value) : i{i_value}, j{j_value} {};
