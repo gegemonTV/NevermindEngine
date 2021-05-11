@@ -10,14 +10,14 @@
 
 namespace ne {
 
-class Object {
+class PhysicObject {
 public :
     /**
      * @brief Default constructor (Init object's params)
      * @param[in] obj_size Size for the object (in px)
      * @param[in] obj_coordinates Coordinates for the object ((0, 0) as default) 
      */
-    Object (const Vector2I & obj_size, const Vector2I & obj_coordinates = Vector2I(0, 0));
+    PhysicObject (const Vector2I & obj_size, const Vector2I & obj_coordinates = Vector2I(0, 0));
 
     /**
      * @brief Getter for object's speed
