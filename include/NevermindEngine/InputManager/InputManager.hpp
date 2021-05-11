@@ -195,5 +195,11 @@ namespace ne
          * @param function Function that could be called on keyboard event
          */
         void onKeyboardEvent(KeyboardEvent event, const std::function<void()> &function);
+
+        /**
+         * @brief Event setter for quit event
+         * @param function Function that could be called on quit event
+         */
+        void onQuitEvent(const std::function<void()> &function);
     };
 } // namespace ne
