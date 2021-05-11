@@ -5,9 +5,6 @@
  */
 #pragma once
 
-// Include standart data types
-#include <cstdint>
-
 /** 
  * @brief Descripe vector with 2 coordinates
  */
@@ -23,11 +20,80 @@ public :
      * @param[in] i_value Value for i
      * @param[in] j_value Value for j
      */
-    Vector2I(const std::int64_t & i_value, const std::int64_t & j_value);
+    Vector2I(const float & i_value, const float & j_value);
 
-private :
+    /**
+     * @brief Assignment overloading (Without copying)
+     * @param[in] source Source for assignment
+     * @return Current vector
+     */
+    Vector2I & operator=(const Vector2I & source);
+
+    /**
+     * @brief + operator overloading for vectors
+     * @param[in] sub Vector for sum calculating
+     * @return Sum vector
+     */
+    const Vector2I operator+(const Vector2I & sub);
+
+    /**
+     * @brief - operator overloading for vectors
+     * @param[in] sub Vector for difference calculating
+     * @return Difference vector
+     */
+    const Vector2I operator-(const Vector2I & sub);
+
+    /**
+     * @brief * operator overloading for vectors
+     * @param[in] factor Number for product calculating
+     * @return Product vector
+     */
+    const Vector2I operator*(const float & factor);
+
+    /**
+     * @brief / operator overloading for vectors
+     * @param[in] div Number for division calculating
+     * @return division vector
+     */
+    const Vector2I operator/(const float & div);
+
+    /**
+     * @brief += operator overloading for vectors
+     * @param[in] sub Vector for sum calculating
+     * @return Sum vector
+     */
+    const Vector2I operator+=(const Vector2I & sub);
+
+    /**
+     * @brief -= operator overloading for vectors
+     * @param[in] sub Vector for difference calculating
+     * @return Difference vector
+     */
+    const Vector2I operator-=(const Vector2I & sub);
+
+    /**
+     * @brief *= operator overloading for vectors
+     * @param[in] factor Number for product calculating
+     * @return Product vector
+     */
+    const Vector2I operator*=(const float & factor);
+
+    /**
+     * @brief /= operator overloading for vectors
+     * @param[in] div Number for division calculating
+     * @return division vector
+     */
+    const Vector2I operator/=(const float & div);
+
+    /**
+     * @brief == operator overloading for vectors
+     * @param[in] source МVector for comparison
+     * @return comparison куыгде
+     */
+    const bool operator==(const Vector2I & source);
+
     /// @brief Contain i vector's part
-    std::int64_t i;
+    float i;
     /// @brief Contain j vector's part
-    std::int64_t j;
+    float j;
 };
