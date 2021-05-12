@@ -4,8 +4,8 @@ using ne::InputManager;
 
 InputManager::InputManager(const bool &quitState){
     isQuit = quitState;
-    eventThread = new std::thread(eventHandler);
-    eventThread->join();
+    keyboardEventThread = new std::thread(keyboardEventHandler);
+    keyboardEventThread->join();
 }
 
 void InputManager::onKeyboardEvent(KeyboardEvent event, const std::function<void()> &function){
@@ -17,7 +17,7 @@ void InputManager::onKeyboardEvent(KeyboardEvent event, const std::function<void
     keyboardEventFunctions.insert(std::make_pair(event, new std::function<void()>(function)));
 }
 
-void InputManager::eventHandler(){
+void InputManager::keyboardEventHandler(){
     SDL_Event e;
     while (isQuit){
         while (SDL_PollEvent(&e)){
