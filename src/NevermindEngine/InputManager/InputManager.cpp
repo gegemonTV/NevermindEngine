@@ -8,6 +8,8 @@ InputManager::InputManager(const bool &quitState){
     eventThread->join();
 }
 
+
+
 void InputManager::eventHandler(){
     SDL_Event e;
     while (isQuit){
