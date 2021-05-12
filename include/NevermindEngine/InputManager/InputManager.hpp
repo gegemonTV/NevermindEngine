@@ -167,14 +167,14 @@ namespace ne
     private:
         bool isQuit;
         /**
-         * SDL_Thread object for Event Thread
+         * SDL_Thread object for Keyboard Event Thread
          */
-         std::thread *eventThread;
+         std::thread *keyboardEventThread;
         
         /**
-         * Loop for handling events in Event Thread
+         * Loop for handling events in Keyboard Event Thread
          */
-        void eventHandler();
+        void keyboardEventHandler();
 
         /**
          * @brief Functions for quit event
